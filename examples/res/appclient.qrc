@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="cert">keys/client_cert.pem</file>
+        <file alias="pkey">keys/client_pkey.pem</file>
+        <file alias="server_cert">keys/server_cert.pem</file>
+    </qresource>
+</RCC>

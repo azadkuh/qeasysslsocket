@@ -1,0 +1,29 @@
+# tmp and build direcotry
+tmp
+xbin
+docs/html
+res/keys
+# ahh! mac os finder!
+.DS_Store
+
+# key files
+*.pem
+
+# temp files
+Makefile*
+*.user
+*.autosave
+*.~
+*.o
+*.qmake.stash
+
+# Visual studio
+*.ncb
+*.idb
+*.suo
+*.pdb
+*.vcxproj.filters
+*.vcproj
+*.vcxproj
+*.sln
+*.rc
