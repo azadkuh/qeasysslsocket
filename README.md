@@ -63,22 +63,20 @@ public:
 
 then use it in a normal TCP server as:
 ```cpp
-class EchoEngine : public am::ServerSideSslSocket
+class EchoServer : public QTcpServer
 {
 public:
-    explicit        EchoEngine(QObject* parent = 0) :  am::ServerSideSslSocket(parent) {
-        
-        QObject::connect(this, &EchoEngine::disconnected, [this](){
-            this->deleteLater();
-        });
-        
-        QObject::connect(this, &EchoEngine::connectionVerified, [this](){
-            // do something useful
-        });
-        
-        QObject::connect(this, &EchoEngine::readyRead, [this](){
-            // do something useful
-        });
+    explicit        EchoServer(QObject* parent) : QTcpServer(parent) {
+    }
+
+    virtual void    incomingConnection(qintptr sokDesc) {
+        // loading private key and local certificate from qrc.
+        EchoEngine *echo = new EchoEngine(this);
+        echo->setPKI(":/pkey", ":/cert");
+
+        // force to drop un-certified clients!
+        echo->setClientCertificate(":/client_cert");
+        echo->setSocketDescriptor(sokDesc);
     }
 };
 ```
