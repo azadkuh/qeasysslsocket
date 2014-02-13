@@ -92,8 +92,6 @@ if ( !svc.listen(QHostAddress::Any, portNumber) ) {
 ```
 
 
-
-
 to test the server you can use openssl in a console:  
 `$> openssl s_client -connect 127.0.0.1:4433`  
 the server should block this connection because the client certificate is not yet specified.
