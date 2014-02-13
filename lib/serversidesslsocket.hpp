@@ -86,7 +86,7 @@ protected:
             });
 
             QObject::connect(this, &EchoEngine::connectionVerified, [this](){
-                // do somethig useful
+                // do something useful
             });
 
             QObject::connect(this, &EchoEngine::readyRead, [this](){
