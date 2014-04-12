@@ -33,7 +33,7 @@ client-side SSL socket class.
 
 ## 1. create keys
 a pair of **private key** + **certificate** is required for clients and the server.  
-please have a look at [`examples/res/create_client_certificate.sh`](./examples/res/create_client_certificate.sh) and [`examples/res/create_client_certificate.sh`](./examples/res/create_client_certificate.sh) if you like to create new pairs.
+please have a look at [`examples/res/create_client_certificate.sh`](./examples/res/create_client_certificate.sh) and [`examples/res/create_server_certificate.sh`](./examples/res/create_server_certificate.sh) if you like to create new pairs.
 
 [back to top](#table-of-contents)
 
